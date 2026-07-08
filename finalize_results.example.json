@@ -1,0 +1,16 @@
+{
+  "updated_at": "示例：阶段三完成后由程序写入",
+  "inquiries": [
+    {
+      "inquiry_no": "R00000000V00",
+      "ladder_no": "XX-XXXXXX.XXX",
+      "project_name": "示例项目名称",
+      "factory_type": "中山",
+      "quotation_no": "SP00000000V00",
+      "oms_sourcing_no": "CSSL000000000",
+      "finalize_status": "ok",
+      "pdf_path": "报价单\\5.18\\R00000000V00.pdf",
+      "xlsx_path": "报价单\\5.18\\CSSL000000000.xlsx"
+    }
+  ]
+}

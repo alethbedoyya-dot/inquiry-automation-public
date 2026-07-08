@@ -1,0 +1,4 @@
+selenium>=4.18.0
+openpyxl>=3.1.0
+pdfplumber>=0.10.0
+# Pillow: optional, only needed for PNG/GIF/WEBP to JPG conversion

@@ -1,0 +1,45 @@
+# ========== 隐私与本地配置（不要上传）==========
+user_config.py
+
+# ========== 业务运行数据（含客户/项目信息）==========
+inquiry_results.json
+inquiry_last.json
+oms_data.json
+finalize_results.json
+test_finalize.json
+
+# ========== 日志、缓存与测试结果 ==========
+logs/
+cache/
+test_results/
+sessions/
+报价单/
+
+# ========== Python 缓存与虚拟环境 ==========
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ========== 环境变量文件 ==========
+.env
+.env.*
+
+# ========== 编辑器 / 系统杂项 ==========
+.vscode/
+.idea/
+.cursor/
+Thumbs.db
+Desktop.ini
+
+# ========== 运行结果与测试输出 ==========
+results_*.txt
+_test_out/
+*.log
+*.pdf
+*.xls
+*.xlsx
+
+# ========== Private template photos ==========
+assets/photos/*
+!assets/photos/README.md
