@@ -1,20 +1,20 @@
 {
-  "created_at": "手动维护",
+  "created_at": "示例生成时间（非真实记录）",
   "total": 1,
   "_说明": "复制为 inquiry_results.json 后修改 inquiries。oms_cart_total_quantity 可选：不填则从 oms_data.json 按项目名（或旧版梯号键）汇总 quantity。",
   "inquiries": [
     {
-      "inquiry_no": "R00000000V00",
-      "ladder_no": "XX-XXXXXX.XXX",
-      "project_name": "示例项目名称",
-      "factory_type": "中山",
+      "inquiry_no": "DEMO-INQUIRY-001",
+      "ladder_no": "DEMO-LADDER-001",
+      "project_name": "脱敏演示项目",
+      "factory_type": "工厂 A",
       "oms_address": "",
-      "oms_direct_address": "示例省市示例地址",
-      "oms_recipient": "收货人13800138000",
+      "oms_direct_address": "示例地址（已脱敏）",
+      "oms_recipient": "示例收货人（电话：138****0000）",
       "material_count": 1,
       "oms_cart_total_quantity": 1,
-      "oms_sourcing_no": "CSSL000000000",
-      "quotation_no": "SP00000000V00",
+      "oms_sourcing_no": "DEMO-SOURCING-001",
+      "quotation_no": "DEMO-QUOTE-001",
       "project_split_count": 1
     }
   ]
