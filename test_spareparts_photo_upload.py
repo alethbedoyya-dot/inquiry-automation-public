@@ -14,7 +14,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from config import SPAREPARTS_MIN_PHOTO_BYTES
 from utils.spareparts_photo_upload import (
+    MANDATORY_COUNT,
     MANDATORY_VIEW_NAMES,
+    OPTIONAL_VIEW_NAMES,
     REINIT_UPLOAD_POPOVER_TRIGGERS_JS,
     VIEW_COUNT,
     HIDE_AND_REMOVE_BODY_POPOVERS_JS,
@@ -48,15 +50,28 @@ class TestUploadExcFormat(unittest.TestCase):
 
 
 class TestAssignPhotos(unittest.TestCase):
-    def test_five_views_from_three_files(self):
+    def test_mandatory_only_when_photos_le_five(self):
         paths = ["a.jpg", "b.jpg", "c.jpg"]
-        out = assign_photos_to_views(paths)
-        self.assertEqual(len(out), VIEW_COUNT)
-        self.assertEqual(out[0], "a.jpg")
-        self.assertEqual(out[1], "b.jpg")
-        self.assertEqual(out[2], "c.jpg")
-        self.assertIn(out[3], paths)
-        self.assertIn(out[4], paths)
+        assignments, view_names = assign_photos_to_views(paths)
+        self.assertEqual(len(assignments), MANDATORY_COUNT)
+        self.assertEqual(view_names, list(MANDATORY_VIEW_NAMES))
+        self.assertEqual(assignments[:3], paths)
+        self.assertIn(assignments[3], paths)
+        self.assertIn(assignments[4], paths)
+
+    def test_optional_views_added_when_photos_gt_five(self):
+        paths = [f"p{i}.jpg" for i in range(8)]
+        assignments, view_names = assign_photos_to_views(paths)
+        self.assertEqual(len(assignments), VIEW_COUNT)
+        self.assertEqual(
+            view_names,
+            list(MANDATORY_VIEW_NAMES) + list(OPTIONAL_VIEW_NAMES),
+        )
+        self.assertEqual(assignments, paths)
+
+    def test_empty_photos_rejected(self):
+        with self.assertRaises(ValueError):
+            assign_photos_to_views([])
 
     def test_mandatory_view_names_fixed(self):
         self.assertEqual(
