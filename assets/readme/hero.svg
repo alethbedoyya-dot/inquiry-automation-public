@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="416" viewBox="0 0 1200 416" role="img" aria-labelledby="title desc">
+  <title id="title">Inquiry Automation · 询价流程自动化</title>
+  <desc id="desc">三阶段示意：创建询价，人工审批后恢复报价，导出并回填文件；通过本地 JSON 状态衔接。</desc>
+  <rect width="1200" height="416" rx="16" fill="#101C2A"/>
+  <g font-family="Segoe UI, Microsoft YaHei, sans-serif">
+    <g id="identity">
+      <text x="56" y="57" fill="#64D5BC" font-size="20" letter-spacing="3">PYTHON / SELENIUM / LOCAL STATE</text>
+      <text x="52" y="138" fill="#F4F7FA" font-size="68" font-weight="700">Inquiry Automation</text>
+      <text x="56" y="190" fill="#A8B8CA" font-size="30">让询价、报价与文件回填，沿着保存的进度继续。</text>
+    </g>
+    <g id="stage-sequence">
+      <path d="M80 270 H1120" stroke="#3C5269" stroke-width="2" fill="none"/>
+      <circle cx="80" cy="270" r="9" fill="#64D5BC"/>
+      <circle cx="472" cy="270" r="9" fill="#E6B86A"/>
+      <circle cx="864" cy="270" r="9" fill="#64D5BC"/>
+      <text x="56" y="322" fill="#F4F7FA" font-size="34" font-weight="600">01 创建询价</text>
+      <text x="448" y="322" fill="#F4F7FA" font-size="34" font-weight="600">02 恢复报价</text>
+      <text x="840" y="322" fill="#F4F7FA" font-size="34" font-weight="600">03 文件回填</text>
+      <text x="56" y="366" fill="#A8B8CA" font-size="24">筛选 · 分组 · 保存</text>
+      <text x="448" y="366" fill="#E6B86A" font-size="24">人工审批后继续</text>
+      <text x="840" y="366" fill="#A8B8CA" font-size="24">PDF → Excel → OMS</text>
+    </g>
+  </g>
+</svg>
